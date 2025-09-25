@@ -17,5 +17,5 @@ public class Q11 {
 		for(int i : data) {
 			System.out.println(i);
 		}
-	}
+	} // {1,5,3,4,4}
 }

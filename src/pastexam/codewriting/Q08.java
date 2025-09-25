@@ -32,7 +32,19 @@ public class Q08 {
 		//any size! Add and subtract some rows
 		//and columns to make sure your solution
 		//works properly.
-		int[][] data = { {1, 2, 3}, {4, 5, 6} }; 
+		int[][] data = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+		int[][] newData = new int[data[0].length][data.length];
+		for (int row = 0; row < newData.length; row++) {
+			for (int col = 0; col < newData[0].length; col++) {
+				newData[row][col] = data[col][row];
+			}
+		} 
+		for (int row = 0; row < newData.length; row++) {
+			for (int col = 0; col < newData[0].length; col++) {
+				System.out.print(newData[row][col] + " ");
+			}
+			System.out.println();
+		} 
 		
 	}
 }

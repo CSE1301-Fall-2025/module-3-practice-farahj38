@@ -28,7 +28,19 @@ public class Q12 {
 		//any size! Add and subtract some rows
 		//and columns to make sure your solution
 		//works properly.
-		int[][] data = { {1, 2, 3}, {4, 5, 6} }; 
+		int[][] data = { {1, 2, 3}, {4, 5, 6}, {7,8,9} };
+		int[] sums = new int[data[0].length];
+		int value = 0;
+		for (int col = 0; col < data[0].length; col++) {
+			for (int row = 0; row < data.length; row++) {
+				value = value + data[row][col];
+			}
+			sums[col] = value;
+			value = 0;
+		} 
+		for (int val : sums) {
+			System.out.print(val + " ");
+		}
 		
 	}
 }

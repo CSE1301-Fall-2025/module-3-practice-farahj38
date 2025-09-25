@@ -27,7 +27,18 @@ public class Q14 {
 		//any size! Add and subtract some data
 		//to make sure your solution
 		//works properly.
-		int[] data = {1, 2, 3}; 
-		
+		int[] data = {1, 2, 3, 4, 5, 6, 7}; 
+		int[] doubleData = new int[2*data.length];
+		for (int i = 0; i < data.length; i++) {
+			doubleData[i] = data[i];
+		}
+		int i = data.length-1;
+		for (int x = data.length; x < (2*data.length); x++) {
+			doubleData[x] = data[i]; 
+			i--;
+		}
+		for (int dd : doubleData) {
+			System.out.print(dd + " ");
+		}
 	}
 }
